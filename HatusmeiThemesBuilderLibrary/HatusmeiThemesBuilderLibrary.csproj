@@ -7,8 +7,8 @@
     <ProjectGuid>{B8D0BFF0-6A09-42DE-B681-756C5A89AA7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HatusmeiThemesBuilderLibrary</RootNamespace>
-    <AssemblyName>HatusmeiThemesBuilderLibrary</AssemblyName>
+    <RootNamespace>ThemesBuilderLibrary</RootNamespace>
+    <AssemblyName>ThemesBuilderLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
