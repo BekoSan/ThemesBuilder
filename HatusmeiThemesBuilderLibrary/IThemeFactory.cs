@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HatusmeiThemesBuilderLibrary
+namespace ThemesBuilderLibrary
 {
     /// <summary>
     /// Main apstraction interface for every theme.
