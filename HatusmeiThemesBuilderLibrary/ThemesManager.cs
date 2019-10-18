@@ -63,18 +63,28 @@ namespace ThemesBuilderLibrary
                         subControl.GetType().GetProperty("ForeColor").SetValue(subControl, AppTheme.ButtonForeColor);
                         subControl.GetType().GetProperty("BackColor").SetValue(subControl, AppTheme.ButtonBackColor);
                         subControl.GetType().GetProperty("Font").SetValue(subControl, AppTheme.ButtonsFont);
+                        subControl.GetType().GetProperty("FlatStyle").SetValue(subControl, AppTheme.ButtonFlatStyle);
+                        ((Button)subControl).FlatAppearance.MouseOverBackColor =  AppTheme.HoverColor;
+                        ((Button)subControl).FlatAppearance.BorderSize =  AppTheme.ButtonBorderSize;
                         break;
-                    case "System.Windows.Forms.Lable":
+                    case "System.Windows.Forms.Label":
                         subControl.GetType().GetProperty("ForeColor").SetValue(subControl, AppTheme.ButtonForeColor);
                         subControl.GetType().GetProperty("BackColor").SetValue(subControl, AppTheme.ButtonBackColor);
                         break;
                     case "System.Windows.Forms.DataGridView":
-                        ((DataGridView)subControl).ColumnHeadersDefaultCellStyle.BackColor = AppTheme.ButtonBackColor;
-                        ((DataGridView)subControl).ColumnHeadersDefaultCellStyle.ForeColor = AppTheme.ButtonForeColor;
-                        ((DataGridView)subControl).BackgroundColor = AppTheme.BackgroundColor;
+                        ((DataGridView)subControl).EnableHeadersVisualStyles = false;
+                        ((DataGridView)subControl).GridColor = AppTheme.DGVGridColor;
+                        ((DataGridView)subControl).ColumnHeadersDefaultCellStyle.BackColor = AppTheme.DGVColumnHeaderBackColor;
+                        ((DataGridView)subControl).ColumnHeadersDefaultCellStyle.ForeColor = AppTheme.DGVColumnHeaderForeColor;
+                        ((DataGridView)subControl).BackgroundColor = AppTheme.DGVBackgroundColor;
+                        ((DataGridView)subControl).ColumnHeadersBorderStyle = AppTheme.DGVHeaderBorderStyle;
+                        ((DataGridView)subControl).RowHeadersDefaultCellStyle.BackColor = AppTheme.DGVRowBackgroundColor;
+                        ((DataGridView)subControl).RowHeadersDefaultCellStyle.SelectionBackColor = AppTheme.SelectionColor;
+                        ((DataGridView)subControl).RowHeadersDefaultCellStyle.ForeColor  = AppTheme.DGVRowForeColor;
+                        ((DataGridView)subControl).RowHeadersDefaultCellStyle.SelectionForeColor = AppTheme.DGVRowSelectionForeColor;
                         break;
                     case "System.Windows.Forms.GroupBox":
-                        subControl.GetType().GetProperty("ForeColor").SetValue(subControl, AppTheme.ButtonForeColor);
+                        subControl.GetType().GetProperty("ForeColor").SetValue(subControl, AppTheme.HeadersForeColor);
                         subControl.GetType().GetProperty("Font").SetValue(subControl, AppTheme.HeadersFont);
                         break;
                     default:
